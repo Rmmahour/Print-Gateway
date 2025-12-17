@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* 🌈 Custom Theme Variables */
+:root {
+  --bg: #f7f8fa;
+  --bg-panel: #ffffff;
+  --accent: #004bab;
+  --accent-2: #1a73e8;
+  --cta: #ffa500;
+  --text: #0f172a;
+  --muted: #5c6b7a;
+  --border: rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 18px 40px rgba(2, 6, 23, 0.08);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --max-w: 1200px;
+}
+
+/* ✅ Apply global font & base styles */
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+/* 🎨 Define Tailwind theme tokens inline */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-text: var(--text);
+  --color-panel: var(--bg-panel);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-cta: var(--cta);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --shadow-lg: var(--shadow-lg);
+  --radius-lg: var(--radius-lg);
+  --radius-md: var(--radius-md);
+  --radius-sm: var(--radius-sm);
+  --max-w: var(--max-w);
+}
+
+/* 🌙 Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a0a;
+    --bg-panel: #111111;
+    --text: #ededed;
+    --muted: #b3b3b3;
+    --border: rgba(255, 255, 255, 0.1);
+  }
+}
